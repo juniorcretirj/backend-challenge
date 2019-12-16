@@ -4,9 +4,8 @@ public enum StatusOrder {
     PAYMENT_PENDING ("Payment Pending"),
     PAYMENT_ACCEPT("Payment Accept"),
     TRANSPORT("In Transport"),
-    DELIVERED("Deliverd"),
-    REFUNDED("Refunded"),
-    CANCELLED("Cancelled");
+    REFUNDED("Refunded");
+   
 
     StatusOrder(String name){
     	this.name=name;
