@@ -84,8 +84,7 @@ public class PaymentService {
 			throw new PaymentRequiredException();
 		if (order.getStatus().equals(StatusOrder.PAYMENT_ACCEPT.getName()))
 			throw new PaymentPendingException();
-		
-		 if (order.getConfirmationDate().plusDays(EXPIRED).isBefore(LocalDateTime.now()))
+		if (order.getConfirmationDate().plusDays(EXPIRED).isBefore(LocalDateTime.now()))
 	            throw new RefundExpiredException(EXPIRED);
 
 	}
